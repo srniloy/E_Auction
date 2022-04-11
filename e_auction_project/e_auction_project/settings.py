@@ -16,7 +16,7 @@ import pymongo
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-print("Base: ",BASE_DIR)
+print("Base: ", BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -83,17 +83,17 @@ WSGI_APPLICATION = 'e_auction_project.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DB_URL = 'mongodb+srv://Instraverse:instraverse121@cluster0.tng4e.mongodb.net/myFirstDatabase?authSource=admin&replicaSet=atlas-h4pkce-shard-0&w=majority&readPreference=primary&retryWrites=true&ssl=true'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'E_Auction',
-        'CLIENT': {
-            'host': DB_URL,
-        }
-    }
-}
+# DB_URL = 'mongodb+srv://Instraverse:instraverse121@cluster0.tng4e.mongodb.net/myFirstDatabase?authSource=admin&replicaSet=atlas-h4pkce-shard-0&w=majority&readPreference=primary&retryWrites=true&ssl=true'
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'E_Auction',
+#         'CLIENT': {
+#             'host': DB_URL,
+#         }
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -130,6 +130,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'statics'),

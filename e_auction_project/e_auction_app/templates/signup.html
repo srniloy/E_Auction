@@ -37,8 +37,14 @@
           </button>
         </form>
 
+        {% if error %}
+        <p class="mt-2">
+          {{error}}<a href="/login">Click here to login</a> {% else %}
+        </p>
+
         <p class="mt-2">
           Already Signed up ? <a href="/login">Click here to login</a>
+          {% endif %}
         </p>
       </div>
     </div>

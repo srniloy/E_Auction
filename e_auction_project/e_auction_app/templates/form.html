@@ -1,0 +1,31 @@
+{% include "home_ic.html" %} {% block gallery_block %}
+
+<div class="container d-flex justify-content-center">
+    <div class="form-wrapper w-50">
+        <form action="create_item" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="name" name="product_name" />
+            </div>
+            <div class="mb-3">
+                <label for="minBidPirce" class="form-label">Minimum Bid Price</label>
+                <input type="number" class="form-control" id="minBidPirce" name="min_bid_price" />
+            </div>
+            <div class="mb-3">
+                <label for="endTime" class="form-label">End Time</label>
+                <input type="datetime-local" class="form-control" id="endTime" name="end_date_time" />
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Product Image</label>
+                <input type="file" class="form-control" id="photo" name="product_image" />
+            </div>
+            <div class="mb-3">
+                <label for="detail" class="form-label">Product Detail</label>
+                <input type="text" class="form-control" id="detail" name="product_detail" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

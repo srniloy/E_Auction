@@ -1,0 +1,24 @@
+{% include "base.html" %} {% block content %}
+<div class="container mt-4">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a
+      class="nav-item home-nav-item nav-link active"
+      onclick="setActiveNav(this)"
+      href="home"
+      >Items Gallery</a
+    >
+    <a
+      class="nav-item home-nav-item nav-link"
+      onclick="setActiveNav(this)"
+      href="my_posts"
+      >My posted items</a
+    >
+    <a
+      class="nav-item home-nav-item nav-link"
+      onclick="setActiveNav(this)"
+      href="#contact"
+      >Contact</a
+    >
+  </div>
+</div>
+{% block gallery_block %} {% endblock gallery_block %}{% endblock content %}
